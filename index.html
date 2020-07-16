@@ -33,7 +33,7 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"> Contact</span></a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a onclick="abc()">
                     <span class="fa fa-sign-in"></span> Login</a>
                 </span>
             </div>            
@@ -46,7 +46,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Login </h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button" class="close" onclick="abc()">&times;</button>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -68,7 +68,7 @@
                             </div>
                         </div>
                         <div class="form-row">
-                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-secondary btn-sm ml-auto" onclick="abc()">Cancel</button>
                             <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>        
                         </div>
                     </form>
@@ -81,9 +81,9 @@
         <div class="modal-dialog modal-lg" role="content">
             <!-- Modal content-->
             <div class="modal-content">
-                <div class="modal-header bg-warning">
+                <div class="modal-header">
                     <h4 class="modal-title">Reserve a Table </h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button" class="close" onclick="bcd()" id="123">&times;</button>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -125,12 +125,12 @@
 
                         <div class="form-group row">
                             <label for="Section" class="col-md-2 col-form-label">Section</label>
-                            <div class="btn-group btn-group-toggle col-md-10" data-toggle="buttons">
+                            <div class="btn-group btn-group-toggle col-md-10">
                                 <label class="btn btn-success active">
-                                    <input type="radio" name="options" id="option2" autocomplete="off" checked> Non-Smoking
+                                    <input type="radio" name="options" id="option1" autocomplete="off"> Non-Smoking
                                 </label>
                                 <label class="btn btn-danger">
-                                    <input type="radio" name="options" id="option3" autocomplete="off"> Smoking
+                                    <input type="radio" name="options" id="option2" autocomplete="off" onclick="def()"> Smoking
                                 </label>
                             </div>   
                         </div>
@@ -147,7 +147,7 @@
 
                         <div class="form-group row">
                             <div class="offset-md-2 col-md-auto">
-                            <button type="submit" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-secondary" onclick="bcd()">Cancel</button>
                             </div>
                             <div class="col-md-auto">
                             <button type="submit" class="btn btn-primary">Reserve</button>
@@ -369,6 +369,18 @@
                 }
             });
         });
+        function abc(){
+            $('#loginModal').modal('toggle');
+        }
+        function bcd(){
+            $('#loginModal2').modal('toggle');
+        }
+        function def() {
+            /*$('#option2').not(':checked').prop("checked", true);*/
+            $('#option1').removeAttr('checked');
+
+        }
+
     </script>
 </body>
 
